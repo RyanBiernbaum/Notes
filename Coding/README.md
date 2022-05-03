@@ -1,8 +1,8 @@
 # Coding
 
-- [Ubuntu Command Line](ubuntu.md)
+- [Linux/Unix Command Line](linux_unix.md)
 
 ___
 
-[Back](README.md)  
+[Back](../README.md)  
 [Home](../README.md)  

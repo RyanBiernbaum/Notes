@@ -1,0 +1,10 @@
+{
+  "MD013": false,
+  "no-inline-html": {
+    "allowed_elements": [
+      "summary",
+      "details",
+      "code"
+    ]
+  }
+}

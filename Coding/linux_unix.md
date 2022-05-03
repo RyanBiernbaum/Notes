@@ -2,23 +2,25 @@
 
 ## List all disks
 
-    sudo lshw -class disk -class storage [ -html | -short | -xml | -businfo ]
+```sudo lshw -class disk -class storage [ -html | -short | -xml | -businfo ]```
 
-## Remove all partitions and unlabel raw disk
+## Remove all GPT/MBR partition data from raw disk
 
-### Single disk
+<details open><summary>Single disk</summary>
 
-    sudo sgdisk -Z /dev/sdb
+```bash
+sudo sgdisk -Z /dev/sdb
+```
 
-### Multiple disks
+</details>
+
+<details open><summary>Multiple disks</summary>
 
 ```bash
 sudo lshw -class disk -class storage -short | grep -Eo '/dev/sd[b-z]' | while read -r; do echo "$REPLY" && sudo sgdisk -Z "$REPLY"; done
 ```
 
-### Interactive script
-
-<details><summary>Expand</summary><p>
+<details><summary>Interactive script</summary>
 
 ```bash
 #!/bin/bash
@@ -56,8 +58,8 @@ for disk in "${disks_to_clear[@]}"; do
 done
 ```
 
-</p></details>
+</details>
 ___
 
-[Back](README.md)  
+[Back](./README.md)  
 [Home](../README.md)  
