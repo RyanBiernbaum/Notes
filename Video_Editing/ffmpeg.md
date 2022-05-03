@@ -28,7 +28,7 @@ ffmpeg -hide_banner -stats -loglevel warning -y `
 
 ## Convert RGB PNG sequence to 8-bit H.264 video using libx264 (software)
 
-details open><summary>Bash</summary>
+<details open><summary>Bash</summary>
 
 ```bash
 ffmpeg -hide_banner -stats -loglevel error -y -vsync 0 -r 2997/50 \
